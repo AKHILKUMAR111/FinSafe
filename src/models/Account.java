@@ -8,11 +8,11 @@ public class Account{
     private double balance;       
     private ArrayList<Double> transactionHistory; //will hold history of transaction
 
-    public Account(String accountHolder,double balance){
+    public Account(String accountHolder){
         this.accountHolder=accountHolder;
-        this.balance=balance;
+        balance=0.0;
         transactionHistory=new ArrayList<>();
-        transactionHistory.add(balance);
+
 
     }
 
@@ -32,6 +32,7 @@ public class Account{
             transactionHistory.remove(0);
         }
         transactionHistory.add(-1*amount);
+
     }
 
     public double getBalance()
